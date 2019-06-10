@@ -1,5 +1,7 @@
 source :rubygems
 
-gem 'sidekiq'
+sidekiq_version = ENV.fetch('SIDEKIQ_VERSION', '> 0')
+
+gem 'sidekiq', sidekiq_version
 gem 'eldritch'
 gem 'rspec'
